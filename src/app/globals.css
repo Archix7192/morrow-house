@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #F4F1EA; /* Warm ivory */
+    --foreground: #282823; /* Deep charcoal */
+    --muted-foreground: #777B64; /* Muted olive */
+    --accent: #B97960; /* Burnt clay */
+    --border: #D4CFC5; /* Fine border */
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #282823;
+      --foreground: #F4F1EA;
+      --muted-foreground: #D4CFC5;
+      --accent: #E5E0D6;
+      --border: #777B64;
+    }
+  }
+}
+
+@layer base {
+/*  * {
+  @apply border-border;
+} */
+body {
+  @apply bg-[var(--background)] text-[var(--foreground)] font-sans antialiased;
+}
+}
+
+@layer components {
+  .container {
+    @app  w-full max-w-[1400px] mx-auto px-6 md:px-12;
+  }
+}
+
+/* Custom font setup - will be configured in layout.ts */
